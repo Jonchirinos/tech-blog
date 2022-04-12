@@ -1,13 +1,14 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
-  const title = document.querySelector('#post-title').value.trim();
-  const contents = document.querySelector('#post-desc').value.trim();
+  const name = document.querySelector('#project-name').value.trim();
+  const needed_funding = document.querySelector('#project-funding').value.trim();
+  const description = document.querySelector('#project-desc').value.trim();
 
-  if (title && contents) {
-    const response = await fetch(`/api/posts`, {
+  if (name && needed_funding && description) {
+    const response = await fetch(`/api/projects`, {
       method: 'POST',
-      body: JSON.stringify({ title, contents }),
+      body: JSON.stringify({ name, needed_funding, description }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -16,7 +17,7 @@ const newFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert('Failed to create post');
+      alert('Failed to create project');
     }
   }
 };
@@ -25,24 +26,22 @@ const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/posts/${id}`, {
+    const response = await fetch(`/api/projects/${id}`, {
       method: 'DELETE',
     });
 
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert('Failed to delete post');
+      alert('Failed to delete project');
     }
   }
 };
 
 document
-  .querySelector('.new-post-form')
+  .querySelector('.new-project-form')
   .addEventListener('submit', newFormHandler);
 
-// if statement to make sure there are posts to add delete buttons to before adding event listeners
-let postList = document.querySelector('.post-list');
-if (postList) {
-  postList.addEventListener('click', delButtonHandler);
-}
+document
+  .querySelector('.project-list')
+  .addEventListener('click', delButtonHandler);
