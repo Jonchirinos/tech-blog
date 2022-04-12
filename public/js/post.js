@@ -1,4 +1,4 @@
-const newFormHandler = async (event) => {
+const newCommentHandler = async (event) => {
   event.preventDefault();
   alert('you made it here');
 
@@ -23,5 +23,5 @@ const newFormHandler = async (event) => {
 };
 
 document
-  .querySelector('.new-post-form')
-  .addEventListener('submit', newFormHandler);
+  .querySelector('.new-comment-form')
+  .addEventListener('submit', newCommentHandler);
