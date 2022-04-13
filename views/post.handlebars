@@ -2,7 +2,6 @@
   <h2>{{name}}</h2>
   <p>{{description}}</p>
   <p><i>Written by {{user.name}} on {{format_date date_created}}</i></p>
-  {{! <h2>Add Comment</h2> }}
   {{#each comments as |comment|}}
     <p>{{comment.message}}
       <span class='text-info'>
