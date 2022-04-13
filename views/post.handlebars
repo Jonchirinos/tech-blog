@@ -3,12 +3,14 @@
   <p>{{description}}</p>
   <p><i>Written by {{user.name}} on {{format_date date_created}}</i></p>
   {{#each comments as |comment|}}
-    <p>{{comment.message}}
-      <span class='text-info'>Submitted by
-        {{comment.user.name}}
-        on
-        {{format_date comment.date_created}}</span>
-    </p>
+    <div>
+      <p>{{comment.message}}
+        <div class='text-info'><i>Submitted by
+            {{user.name}}
+            on
+            {{format_date comment.date_created}}</i></div>
+      </p>
+    </div>
   {{/each}}
 
   {{#each comments as |comment|}}
