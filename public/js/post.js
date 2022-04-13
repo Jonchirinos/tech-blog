@@ -6,7 +6,6 @@ const newCommentHandler = async (event) => {
   const post_id = document.querySelector('input[name="post_id"]').value.trim();
 
   if (text) {
-    console.log(response);
     const response = await fetch(`/api/posts`, {
       method: 'POST',
       body: JSON.stringify({ post_id, title }),
@@ -20,6 +19,7 @@ const newCommentHandler = async (event) => {
     } else {
       alert('Failed to create post');
     }
+    console.log(response);
   }
 };
 
