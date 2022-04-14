@@ -5,7 +5,7 @@ header,
 
 .body {
   background-color: #bad9ba;
-  color: white;
+  /* color: white; */
   text-align: center;
 }
 
@@ -14,12 +14,27 @@ header,
   border: none;
   padding: 0;
   cursor: pointer;
-  color: #1b89bc;
+  /* color: #1b89bc; */
   text-decoration: none;
   font-size: 100%;
 }
 
+.m-a {
+  margin: auto;
+}
+
+.card {
+  background: grey;
+  padding: 1rem;
+  border: 1px solid grey;
+}
+
+.card-header {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .no-button:hover {
-  color: rgb(19, 64, 19);
+  /* color: rgb(19, 64, 19); */
   text-decoration: underline;
 }
