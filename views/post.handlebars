@@ -9,13 +9,11 @@
             {{user.name}}
             on
             {{format_date comment.date_created}}</i></div>
+        <div>{{comment.title}}</div>
       </p>
     </div>
   {{/each}}
 
-  {{#each comments as |comment|}}
-    <div>{{comment.title}}</div>
-  {{/each}}
   {{#if logged_in}}
     <form class='form new-comment-form' data-id='{{id}}'>
       <div class='form-group'>
