@@ -1,12 +1,15 @@
 <!-- Loop over each object in the post array -->
 {{#each posts as |post|}}
-  <div class='m-a mb-4 post'>
+  <div class='m-a mb-4'>
     <div class=''>
       <h2>
         <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-        <a href='/post/{{post.id}}'>{{post.title}}</a>
+        <a class='txt-lg' href='/post/{{post.id}}'>{{post.title}}</a>
       </h2>
-      <p>Created by {{post.user.name}} on {{format_date post.date_created}}</p>
+      <p class=''>Created by
+        {{post.user.name}}
+        on
+        {{format_date post.date_created}}</p>
     </div>
 
   </div>

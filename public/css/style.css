@@ -4,9 +4,43 @@ header,
 }
 
 .body {
-  background-color: #bad9ba;
+  background-color: rebeccapurple;
   /* color: white; */
   text-align: center;
+}
+
+.m-a {
+  margin: auto;
+}
+
+.txt-lg {
+  font-size: large;
+}
+
+.txt-cnt {
+  text-align: center;
+}
+
+.post-weight {
+  font-size: large;
+  font-weight: 700;
+}
+
+/* .card {
+  background: grey;
+  padding: 1rem;
+  border: 1px solid grey;
+  border-radius: 0.25rem;
+  height: 10rem;
+  width: 30rem;
+} */
+
+/* .card-body {
+  font-size: 0.9rem;
+} */
+
+.no-button:hover {
+  text-decoration: underline;
 }
 
 .no-button {
@@ -14,27 +48,19 @@ header,
   border: none;
   padding: 0;
   cursor: pointer;
-  /* color: #1b89bc; */
   text-decoration: none;
   font-size: 100%;
 }
 
-.m-a {
-  margin: auto;
+.btn-style {
+  background: antiquewhite;
+  border: 1px solid navajowhite;
 }
 
-.card {
-  background: grey;
-  padding: 1rem;
-  border: 1px solid grey;
+.dpink {
+  color: deeppink;
 }
 
-.card-header {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.no-button:hover {
-  /* color: rgb(19, 64, 19); */
-  text-decoration: underline;
+.a-white {
+  color: antiquewhite;
 }
