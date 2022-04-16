@@ -5,6 +5,7 @@
   {{#each comments as |comment|}}
     <div>
       <p class=''>{{comment.message}}
+        <form class="form delete-comment-form">
         <div>{{comment.title}}</div>
         <div class='a-blue mb-4'>Submitted by
           {{user.name}}
@@ -13,6 +14,7 @@
       </p>
     </div>
   {{/each}}
+  </form>
   <br />
   <div id='myForm' class='p-3'>
     <form class='update-post-form'>

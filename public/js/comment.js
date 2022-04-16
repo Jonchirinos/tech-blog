@@ -43,6 +43,22 @@ const updateButtonHandler = async (event) => {
   }
 };
 
+const delCommentHandler = async (event) => {
+  if (event.target.hasAttribute('data-action')) {
+    const id = event.target.getAttribute('data-action');
+
+    const response = await fetch(`/api/comments/${id}`, {
+      method: 'DELETE',
+    });
+
+    if (response.ok) {
+      document.location.replace(`/post/${post.id}`);
+    } else {
+      alert('Failed to delete post');
+    }
+  }
+};
+
 document
   .querySelector('.new-comment-form')
   .addEventListener('submit', newCommentHandler);
@@ -50,3 +66,7 @@ document
 document
   .querySelector('.update-post-form')
   .addEventListener('submit', updateButtonHandler);
+
+document
+  .querySelector('.delete-comment-form')
+  .addEventListener('submit', delCommentHandler);
