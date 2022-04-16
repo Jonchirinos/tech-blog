@@ -26,19 +26,6 @@ header,
   font-weight: 700;
 }
 
-/* .card {
-  background: grey;
-  padding: 1rem;
-  border: 1px solid grey;
-  border-radius: 0.25rem;
-  height: 10rem;
-  width: 30rem;
-} */
-
-/* .card-body {
-  font-size: 0.9rem;
-} */
-
 .no-button:hover {
   text-decoration: underline;
 }
@@ -62,5 +49,9 @@ header,
 }
 
 .a-white {
-  color: antiquewhite;
+  color: antiquewhite !important;
+}
+
+.a-blue {
+  color: rgb(193, 76, 139);
 }

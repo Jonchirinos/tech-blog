@@ -1,23 +1,39 @@
-<div class='m-a mb-4 text-center'>
+<div class='m-a mb-4 text-center a-white'>
   <h2>{{name}}</h2>
   <p class='post-weight'>{{description}}</p>
-  <p>Written by {{user.name}} on {{format_date date_created}}</p>
+  <p class='a-blue'>Written by {{user.name}} on {{format_date date_created}}</p>
   {{#each comments as |comment|}}
     <div>
       <p class=''>{{comment.message}}
         <div>{{comment.title}}</div>
-        <div class='a-white mb-4 text-info'>Submitted by
+        <div class='a-blue mb-4'>Submitted by
           {{user.name}}
           on
           {{format_date comment.date_created}}</div>
       </p>
     </div>
   {{/each}}
+  <br />
+  <div id='myForm' class='p-3'>
+    <form class='update-post-form'>
+      <h5>Update the Post</h5>
+      <input value='{{id}}' type='hidden' name='post_id' />
+
+      <label><b>Title:</b></label>
+      <input id='update-title' name='title' required />
+
+      <label><b>Description:</b></label>
+      <input id='update-desc' name='description' required />
+
+      <button type='submit' class='btn btn-style'>Update</button>
+    </form>
+  </div>
 
   {{#if logged_in}}
     <form class='form new-comment-form' data-id='{{id}}'>
       <div class='form-group'>
-        <label for='comment-desc'>Add a Comment:</label>
+
+        <label for='comment-desc'></label>
         <input value='{{id}}' type='hidden' name='post_id' />
         <textarea
           class='form-input'
