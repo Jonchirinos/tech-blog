@@ -17,7 +17,7 @@ This project showcases the use of the MVC model used in programming. The Tech Bl
 
 ## Screenshot
 
-![A screenshot of the website](./images/techblog.png)
+![A screenshot of the website](.assets/Images/techblog.png)
 
 ## Links to Application
 
