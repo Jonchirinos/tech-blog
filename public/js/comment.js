@@ -1,6 +1,5 @@
 const newCommentHandler = async (event) => {
   event.preventDefault();
-  alert('you made it here');
 
   const title = document.querySelector('#comment-desc').value.trim();
   const post_id = document.querySelector('input[name="post_id"]').value.trim();
